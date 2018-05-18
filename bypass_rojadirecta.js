@@ -4,7 +4,7 @@
 // @description  Bypasses rojadirecta  redirection page  and load the stream  websites directly
 // @include      *it.rojadirecta.eu/goto/*
 // @icon http://www.rojadirecta.me/static/roja.jpg
-// @copyright    free
+// @copyright    GNU General Public License v3.0
 // @run-at       document-body
 // @author       Bahha 
 // ==/UserScript==
