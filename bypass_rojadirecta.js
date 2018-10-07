@@ -1,13 +1,14 @@
 // ==UserScript==
-// @name         Bypass Rojadirecta
-// @version      1.0
+// @name         Bypass Rojadirecta redirection
+// @version      1.3
+// @license      LGPLv3
+// @homepage https://github.com/bahhax404/rojadirecta
 // @description  Bypasses rojadirecta  redirection page  and load the stream  websites directly
-// @include      *it.rojadirecta.eu/goto/*
-// @include      *.rojadirecta.cat/goto/* 
+// @include      *.rojadirecta.*
 // @icon http://www.rojadirecta.me/static/roja.jpg
-// @copyright    GNU General Public License v3.0
 // @run-at       document-body
 // @author       Bahha 
+// @namespace https://greasyfork.org/users/186498
 // ==/UserScript==
 
     var goto = "goto"
