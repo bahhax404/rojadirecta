@@ -10,25 +10,18 @@
 // @author       Bahha 
 // ==/UserScript==
 
-//retreive the redirection page url
-var redirectionPageLink = window.location.href ;
-// retreive the actual url for the stream website 
-var directLink = redirectionPageLink.slice(redirectionPageLink.indexOf("goto/") + 5);
-//create the link to the page
-var linkToPage = document.createElement("a");
-//add the link to <a> tag
-linkToPage.href = "http://"+ directLink ;
-//add a class to <a> tag to make sure we select the correct link .
-linkToPage.className = "goToStream";  
-//function to click the link
-function goToStream() {
-    //append the link to the page
-    document.body.appendChild(linkToPage);
-    //select the link we appended to the page 
-    var goToPage = document.getElementsByClassName("goToStream");
-    //Go to the page 
-    goToPage[0].click();
- 
-}
- //calling the function  
- goToStream();
+    var goto = "goto"
+    //retreive all the urls on the page
+    var links = document.getElementsByTagName("a");
+    // retrieve urls with goto word and replace them with the actual stream link. 
+   
+    for (var i = 0; i < links.length; i++) {
+
+      if (links[i].href.match(goto)) {
+      link = links[i].href.slice(links[i].href.indexOf("goto/") + 5);
+      links[i].href = "http://" + link;
+    
+      }
+
+    }
+//that's it :)
